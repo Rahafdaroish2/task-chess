@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    display: inline;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+.app-container {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px;
+}
+
+
+.app-inner {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 12px;
+padding: 18px;
+border-radius: 10px;
+box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+
+.title {
+font-size: 1.25rem;
+margin: 0;
+}
+
+
+.chess-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+width: max-content;
+}
+
+
+/* controls placed ABOVE the board */
+.controls {
+display: flex;
+gap: 8px;
+margin-bottom: 4px; /* small gap between controls and board */
+}
+
+
+.controls button {
+padding: 6px 10px;
+border-radius: 6px;
+border: 1px solid #bbb;
+cursor: pointer;
+}
+.board {
+display: inline-block;
+border: 2px solid #333;
+}
+
+
+.row {
+display: flex;
+}
+
+
+.square {
+width: 54px;
+height: 54px;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+cursor: pointer;
+font-size: 26px;
+box-sizing: border-box;
+}
+
+
+.square.light {
+background-color: #f0d9b5;
+}
+
+
+.square.dark {
+background-color: #b58863;
+}
+
+
+.square.highlight {
+background-color:#755a44;
+outline: 1px solid #a07f63;
+}
+
+
+.queen {
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.queen-symbol { pointer-events: none; }
+
+
+/* action buttons: appear ABOVE the square and don't affect layout */
+.actions {
+position: absolute;
+bottom: 100%; /* place above the square */
+left: 50%;
+transform: translate(-50%, -6px);
+display: flex;
+gap: 6px;
+z-index: 30;
+pointer-events: auto;
+}
+
+
+.actions button {
+font-size: 12px;
+padding: 4px 6px;
+border: 1px solid rgba(0,0,0,0.2);
+background: #ffffffcc;
+border-radius: 6px;
+cursor: pointer;
+white-space: nowrap;
+}
+
+
+.message {
+background: #ffefef;
+color: #900;
+padding: 8px 12px;
+border-radius: 8px;
+}
+
+
+.status {
+font-size: 14px;
+color: #333;
+}
